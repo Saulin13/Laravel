@@ -39,5 +39,12 @@ Route::get('/contatos', function () {
 });
 
 Route::get('/produtos', function () {
-    return view('produto');
+
+    $busca = request('search');
+
+    return view('produtos', ['busca' => $busca]);
+});
+
+Route::get('/produtos_testes/{id?}', function ($id = null) {
+    return view('produto', ['id' => $id]);
 });
