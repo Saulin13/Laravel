@@ -6,7 +6,7 @@
     <title>Pagina de Contato</title>
 </head>
 <body>
-    <h1>Essa é a página de contato</h1>
+    <h1>Entre em contato com nosso desenvolvedor {{ $nome }} atraves do email: {{ $email }}</h1>
 
     <a href='/'>Voltar para Home</a>
 </body>
