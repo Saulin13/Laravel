@@ -50,7 +50,17 @@
         </header>
 
 
-        @yield('content')
+        <main>
+            <div class="conteiner-fluid">
+                <div class="row">
+                    @if(session('msg'))
+                        <p class="msg">{{ session('msg') }}</p>
+                    @endif
+                    @yield('content')
+                </div>
+            </div>
+
+        </main>
 
         <footer>
         <p>Saulo Events &copy; 2025</p>
@@ -58,6 +68,7 @@
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     </body>
 
     
