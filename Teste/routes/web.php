@@ -13,15 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\controllers\EventController;
-use App\Http\controllers\ContactController;
-use App\Http\controllers\ProductsControler;
-
+use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/events/{id}', [EventController::class, 'show']);
+Route::post('/events', [EventController::class, 'store']);
 
-Route::get('/eventos/criar', [EventController::class, 'criar']);
-
-Route::post('/eventos', [EventController::class, 'store']);
-
-Route::get('/contatos', [ContactController::class, 'contato']);
+Route::get('/contact', function () {
+    return view('contact');
+});
