@@ -87,4 +87,14 @@ class EventController extends Controller
 
     }
 
+    public function destroy($id){
+
+        Event::findOrFail($id)->delete();
+
+        return redirect('/dashbord')->with('msg', 'Evento excluido com sucesso!');
+
+    }
+
+
+
 }
